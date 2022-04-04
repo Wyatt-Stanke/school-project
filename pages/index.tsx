@@ -1,24 +1,24 @@
-import { Title, Text, Anchor } from '@mantine/core';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import type { NextPage } from "next";
+import Header from "../components/Header";
+import Credits from "../components/Credits";
+import OldWay from "../components/OldWay";
+import NewWay from "../components/NewWay";
+import Experiment from "../components/Experiment";
+import Quiz from "../components/Quiz";
+import Footer from "../components/Footer";
 
-export default function HomePage() {
-  return (
-    <>
-      <Title sx={{ fontSize: 100, fontWeight: 900, letterSpacing: -2 }} align="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span">
-          Mantine
-        </Text>
-      </Title>
-      <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" mt="xl">
-        This starter Next.js projects includes a minimal setup for server side rendering, if you
-        want to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/theming/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
-      </Text>
-      <ColorSchemeToggle />
-    </>
-  );
-}
+const Home: NextPage = () => {
+	return (
+		<>
+			<Header />
+			<Credits />
+			<OldWay />
+			<NewWay />
+			<Experiment />
+			<Quiz />
+			<Footer />
+		</>
+	);
+};
+
+export default Home;
